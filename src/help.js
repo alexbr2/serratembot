@@ -1,6 +1,6 @@
 const help = (prefix) => {
 	return `
-「 *SerraTem Bot* 」
+「 * Jarvis 5.0* 」
 
 ◪ *informações*
   ❏ Prefix: 「  ${prefix}  」
@@ -21,49 +21,12 @@ const help = (prefix) => {
   ├─ ❏ ${prefix}toimg
   ├─ ❏ ${prefix}tomp3
   ├─ ❏ ${prefix}bpink
-  ├─ ❏ ${prefix}marvellogo
-  ├─ ❏ ${prefix}snowwrite
-  ├─ ❏ ${prefix}3dtext
-  ├─ ❏ ${prefix}ninjalogo
-  ├─ ❏ ${prefix}water
-  ├─ ❏ ${prefix}firetext
-  ├─ ❏ ${prefix}logowolf
-  ├─ ❏ ${prefix}logowolf2
-  ├─ ❏ ${prefix}phlogo
-  ├─ ❏ ${prefix}glitch
-  ├─ ❏ ${prefix}neonlogo
-  ├─ ❏ ${prefix}neonlogo2
-  ├─ ❏ ${prefix}lionlogo
-  ├─ ❏ ${prefix}jokerlogo
-  ├─ ❏ ${prefix}shadow
-  ├─ ❏ ${prefix}burnpaper
-  ├─ ❏ ${prefix}coffee
-  ├─ ❏ ${prefix}lovepaper
-  ├─ ❏ ${prefix}woodblock
-  ├─ ❏ ${prefix}qowheart
-  ├─ ❏ ${prefix}mutgrass
-  ├─ ❏ ${prefix}undergocean
-  ├─ ❏ ${prefix}woodenboards
-  ├─ ❏ ${prefix}wolfmetal
-  ├─ ❏ ${prefix}metalictglow
-  ├─ ❏ ${prefix}8bit
-  ├─ ❏ ${prefix}ttp
-  ├─ ❏ ${prefix}herrypotter
-  ├─ ❏ ${prefix}pubglogo
   └─ ❏ ${prefix}quotemaker
 ◪ *MEDIA*
   │
   ├─ ❏ ${prefix}trendtwit
   ├─ ❏ ${prefix}randomkpop
   └─ ❏ ${prefix}ytsearch
-◪ *EDUCATION*
-  │
-  ├─ ❏ ${prefix}wiki
-  ├─ ❏ ${prefix}wikien
-  ├─ ❏ ${prefix}nulis
-  ├─ ❏ ${prefix}quotes
-  ├─ ❏ ${prefix}quotes2
-  └─ ❏ ${prefix}artinama
 ◪ *KERANG AJAIB*
   │
   ├─ ❏ ${prefix}apakah
@@ -76,7 +39,6 @@ const help = (prefix) => {
   ├─ ❏ ${prefix}ytmp3
   ├─ ❏ ${prefix}ytmp4
   ├─ ❏ ${prefix}tiktok
-  └─ ❏ ${prefix}joox
 ◪ *MEME*
   │
   ├─ ❏ ${prefix}meme
@@ -85,13 +47,6 @@ const help = (prefix) => {
   │
   ├─ ❏ ${prefix}play
   └─ ❏ ${prefix}tts
-◪ *MÚSICA*
-  │
-  ├─ ❏ ${prefix}lirik
-  └─ ❏ ${prefix}chord
-◪ *ISLAM*
-  │
-  └─ ❏ ${prefix}quran
 ◪ *STALK*
   │
   ├─ ❏ ${prefix}tiktokstalk
@@ -100,29 +55,21 @@ const help = (prefix) => {
   │
   ├─ ❏ ${prefix}neonime
   ├─ ❏ ${prefix}pokemon
-  ├─ ❏ ~${prefix}loli~
   ├─ ❏ ${prefix}waifu
   ├─ ❏ ${prefix}randomanime
-  ├─ ❏ ${prefix}husbu
-  ├─ ❏ ${prefix}husbu2
   ├─ ❏ ${prefix}wait
   └─ ❏ ${prefix}nekonime
 ◪ *DIVERSÃO*
   │
-  ├─ ❏ ${prefix}alay
   ├─ ❏ ${prefix}gantengcek
   ├─ ❏ ${prefix}watak
   ├─ ❏ ${prefix}hobby
-  ├─ ❏ ${prefix}game
-  ├─ ❏ ${prefix}bucin
   ├─ ❏ ${prefix}trust
   ├─ ❏ ${prefix}dare
-  └─ ❏ ${prefix}simi
 ◪ *INFORMAÇÃO*
   │
   ├─ ❏ ${prefix}bahasa
   ├─ ❏ ${prefix}kodenegara
-  ├─ ❏ ${prefix}kbbi
   ├─ ❏ ${prefix}fakta
   ├─ ❏ ${prefix}infocuaca
   ├─ ❏ ${prefix}infogempa
@@ -145,8 +92,6 @@ const help = (prefix) => {
   ├─ ❏ ${prefix}qrcode
   ├─ ❏ ${prefix}afk
   ├─ ❏ ${prefix}timer
-  ├─ ❏ ${prefix}fml
-  └─ ❏ ${prefix}fml2
 `
 }
 
