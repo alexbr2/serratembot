@@ -1,11 +1,11 @@
 const help = (prefix) => {
 	return `
-「 *Toin BOT* 」
+「 *SerraTem Bot* 」
 
 ◪ *informações*
   ❏ Prefix: 「  ${prefix}  」
-  ❏ Criador : Toin
-  ❏ Como instalar o BOT: https://www.youtube.com/watch?v=4cjhlXo9aGo
+  ❏ Criador : Guiguicdd
+  ❏ Site do Bot: https://serratem.com.br/bot
 
 ◪ *SOBRE*
   │
@@ -100,7 +100,7 @@ const help = (prefix) => {
   │
   ├─ ❏ ${prefix}neonime
   ├─ ❏ ${prefix}pokemon
-  ├─ ❏ ${prefix}loli
+  ├─ ❏ ~${prefix}loli~
   ├─ ❏ ${prefix}waifu
   ├─ ❏ ${prefix}randomanime
   ├─ ❏ ${prefix}husbu
