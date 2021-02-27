@@ -1,4 +1,4 @@
 const apikey = {
-        BarBarKey: 'YOUR_APIKEY',
+        BarBarKey: '+5513991575956',
         TobzKey: 'BotWeA',
 }
