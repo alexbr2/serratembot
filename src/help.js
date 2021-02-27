@@ -16,8 +16,8 @@ const help = (prefix) => {
   └─ ❏ ${prefix}bugreport
 ◪ *FAZER*
   │
-  ├─ ❏ ${prefix}sticker
-  ├─ ❏ ${prefix}stickergif
+  ├─ ❏ ${prefix}figurinha ou ${prefix}fga
+  ├─ ❏ ${prefix}figurinhaanimada
   ├─ ❏ ${prefix}toimg
   ├─ ❏ ${prefix}tomp3
   ├─ ❏ ${prefix}bpink
@@ -86,6 +86,7 @@ const help = (prefix) => {
   ├─ ❏ ${prefix}qrcode
   ├─ ❏ ${prefix}afk
   ├─ ❏ ${prefix}timer
+  ├─ ❏ ${prefix}cep
 `
 }
 

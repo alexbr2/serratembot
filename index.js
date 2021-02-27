@@ -946,8 +946,11 @@ async function starts() {
 					client.groupSettingChange(from, GroupSettingChange.messageSend, false)
 					client.sendMessage(from, open, text, { quoted: mek })
 					break
+				case 'fga':
 				case 'stiker':
 				case 'sticker':
+				case 'figurinha':
+				case 'figurinhaanimada':
 				case 'stickergif':
 				case 'stikergif':
 					if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
@@ -988,7 +991,7 @@ async function starts() {
 								console.log(`Error : ${err}`)
 								fs.unlinkSync(media)
 								tipe = media.endsWith('.mp4') ? 'video' : 'gif'
-								reply(`❌ Falhou, no momento da conversão ${tipe} para o sticker`)
+								reply(`❌ Falhou, no momento da conversão ${tipe} para o figurinha`)
 							})
 							.on('end', function () {
 								console.log('Finish')
@@ -1000,20 +1003,22 @@ async function starts() {
 							.addOutputOptions([`-vcodec`, `libwebp`, `-vf`, `scale='min(320,iw)':min'(320,ih)':force_original_aspect_ratio=decrease,fps=15, pad=320:320:-1:-1:color=white@0.0, split [a][b]; [a] palettegen=reserve_transparent=on:transparency_color=ffffff [p]; [b][p] paletteuse`])
 							.toFormat('webp')
 							.save(ran)
+					}else{
+						reply(`❌ Você precisa marcar ou enviar uma imagem/gif`)
 					}
 					break
 
 				case 'toimg':
 					client.updatePresence(from, Presence.composing)
 					if (!isUser) return reply(mess.only.daftarB)
-					if (!isQuotedSticker) return reply('❌ Apenas Stickers ❌')
+					if (!isQuotedSticker) return reply('❌ Apenas Figurinhas ❌')
 					reply(mess.wait)
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
 					media = await client.downloadAndSaveMediaMessage(encmedia)
 					ran = getRandom('.png')
 					exec(`ffmpeg -i ${media} ${ran}`, (err) => {
 						fs.unlinkSync(media)
-						if (err) return reply('❌ Falha ao converter Stickers em imagens ❌')
+						if (err) return reply('❌ Falha ao converter Figurinha em imagens ❌')
 						buffer = fs.readFileSync(ran)
 						client.sendMessage(from, buffer, image, { quoted: mek, caption: '>//<' })
 						fs.unlinkSync(ran)
@@ -1295,6 +1300,15 @@ async function starts() {
 						reply('Interessante?')
 					}
 					break
+					case 'consultacep':
+						cep = body.slice(13)
+						client.updatePresence(from, Presence.composing)
+						data = await fetchJson(`https://brasilapi.com.br/api/cep/v1/${cep}`, { method: 'get' })
+						if (!isUser) return reply(mess.only.daftarB)
+						reply(mess.wait)
+						hasil = `Cep : ${data.cep}\nEstado : ${data.state}\nRua: ${data.street}`
+						reply(hasil)
+						break
 				default:
 					if (isGroup && isSimi && budy != undefined) {
 						console.log(budy)
