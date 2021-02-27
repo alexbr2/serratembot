@@ -1,6 +1,6 @@
 const config = {
-        botName: 'Jarvis 5.0',
-        ownerName: 'Guilherme',
+        botName: 'Bot Alex',
+        ownerName: 'Luis',
         youtube: 'YOUTUBE_LINK',
         instagram: 'INSTAGRAM_LINK',
 }
