@@ -262,7 +262,7 @@ async function starts() {
 					ownerB: '[❗] Este comando só pode ser usado pelo Guilherme! ❌',
 					admin: '[❗] Este comando só pode ser usado por administradores de grupo! ❌',
 					Badmin: '[❗] Este comando só pode ser usado quando o bot se torna administrador! ❌',
-					daftarB: `── 「REGISTRE-SE」 ──\nOlá como!\nVocê não está registrado no banco de dados, \n\nComando : ${prefix}daftar nome|idade\nExemplo : ${prefix}daftar Guilherme|18`,
+					daftarB: `── 「REGISTRE-SE」 ──\nOlá como!\nVocê não está registrado no banco de dados, \n\nComando : ${prefix}cadastrar nome|idade\nExemplo : ${prefix}cadastrar Guilherme|18`,
 				}
 			}
 			const apakah = ['Ya', 'Tidak']
@@ -765,7 +765,7 @@ async function starts() {
 						reply('Grupo de transmissão de sucesso')
 					}
 					break
-				case 'quotemaker':
+				case 'criarfrase':
 					gh = body.slice(12)
 					if (!isUser) return reply(mess.only.daftarB)
 					teks1 = gh.split("|")[0];
@@ -788,25 +788,13 @@ async function starts() {
 					break
 				case 'ownergrup':
 				case 'ownergroup':
+				case 'donodogrupo':
 					client.updatePresence(from, Presence.composing)
 					options = {
 						text: `Este proprietário do grupo é : @${from.split("-")[0]}`,
 						contextInfo: { mentionedJid: [from] }
 					}
 					client.sendMessage(from, options, text, { quoted: mek })
-					break
-				case 'nekonime':
-					data = await fetchJson('https://waifu.pics/api/sfw/neko')
-					if (!isUser) return reply(mess.only.daftarB)
-					hasil = await getBuffer(data.url)
-					client.sendMessage(from, hasil, image, { quoted: mek })
-					break
-				case 'neko':
-					gatauda = body.slice(6)
-					reply(mess.wait)
-					anu = await fetchJson(`https://tobz-api.herokuapp.com/api/nekonime?apikey=BotWeA`, { method: 'get' })
-					buffer = await getBuffer(anu.result)
-					client.sendMessage(from, buffer, image, { quoted: mek })
 					break
 				case 'add':
 					client.updatePresence(from, Presence.composing)
@@ -849,7 +837,7 @@ async function starts() {
 					if (!isOwner) return reply(mess.only.ownerB)
 					const cmd = body.slice(5)
 					exec(cmd, (err, stdout) => {
-						if (err) return client.sendMessage(from, "Comando Salah", text, { quoted: mek })
+						if (err) return client.sendMessage(from, "Comando Errado", text, { quoted: mek })
 						if (stdout) {
 							client.sendMessage(from, stdout, text, { quoted: mek })
 						}
@@ -1059,16 +1047,19 @@ async function starts() {
 					client.sendMessage(from, buffer, image, { quoted: mek, caption: infomp3 })
 					client.sendMessage(from, lagu, audio, { mimetype: 'audio/mp4', filename: `${anu.title}.mp3`, quoted: mek })
 					break
-				case 'daftar':
+				case 'cadastrar':
 					client.updatePresence(from, Presence.composing)
 					if (isUser) return reply('você já está registrado')
-					if (args.length < 1) return reply(`Parâmetro incorreto \nCommand : ${prefix}daftar nome|idade\nContoh : ${prefix}daftar Guilherme|18`)
+					if (args.length < 1) return reply(`Parâmetro incorreto \nCommand : ${prefix}cadastrar nome|idade\nContoh : ${prefix}cadastrar Guilherme|18`)
 					var reg = body.slice(8)
 					var jeneng = reg.split("|")[0];
 					var umure = reg.split("|")[1];
 					user.push(sender)
 					fs.writeFileSync('./database/json/user.json', JSON.stringify(user))
-					client.sendMessage(from, `\`\`\`O registro foi bem sucedido com SN: TM08GK8PPHBSJDH10J\`\`\`\n\n\`\`\`Pada ${date} ${time}\`\`\`\n\`\`\`[Nama]: ${jeneng}\`\`\`\n\`\`\`[Número]: wa.me/${sender.split("@")[0]}\`\`\`\n\`\`\`[Era]: ${umure}\`\`\`\n\`\`\`Para usar o bot\`\`\`\n\`\`\`Por favor\`\`\`\n\`\`\`enviar ${prefix}help\`\`\`\n\`\`\`\nTotal de usuários ${user.length}\`\`\``, text, { quoted: mek })
+					var nomor = "5522981274455";
+					var pesan = `\`\`\`O registro foi bem sucedido com SN: TM08GK8PPHBSJDH10J\`\`\`\n\n\`\`\`Pada ${date} ${time}\`\`\`\n\`\`\`[Nama]: ${jeneng}\`\`\`\n\`\`\`[Número]: wa.me/${sender.split("@")[0]}\`\`\`\n\`\`\`[Era]: ${umure}\`\`\`\n\`\`\`Para usar o bot\`\`\`\n\`\`\`Por favor\`\`\`\n\`\`\`enviar ${prefix}help\`\`\`\n\`\`\`\nTotal de usuários ${user.length}\`\`\``;
+					client.sendMessage(nomor + '@s.whatsapp.net', pesan, text)
+					client.sendMessage(from, pesan, text, { quoted: mek })
 					break
 				case 'welcome':
 					if (!isGroup) return reply(mess.only.group)

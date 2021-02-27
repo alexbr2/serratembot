@@ -21,7 +21,7 @@ const help = (prefix) => {
   ├─ ❏ ${prefix}toimg
   ├─ ❏ ${prefix}tomp3
   ├─ ❏ ${prefix}bpink
-  └─ ❏ ${prefix}quotemaker
+  └─ ❏ ${prefix}criarfrase
 ◪ *MEDIA*
   │
   ├─ ❏ ${prefix}trendtwit
@@ -58,7 +58,6 @@ const help = (prefix) => {
   ├─ ❏ ${prefix}waifu
   ├─ ❏ ${prefix}randomanime
   ├─ ❏ ${prefix}wait
-  └─ ❏ ${prefix}nekonime
 ◪ *DIVERSÃO*
   │
   ├─ ❏ ${prefix}gantengcek
