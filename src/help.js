@@ -68,13 +68,8 @@ const help = (prefix) => {
   ├─ ❏ ${prefix}dare
 ◪ *INFORMAÇÃO*
   │
-  ├─ ❏ ${prefix}bahasa
-  ├─ ❏ ${prefix}kodenegara
-  ├─ ❏ ${prefix}fakta
-  ├─ ❏ ${prefix}infocuaca
-  ├─ ❏ ${prefix}infogempa
-  ├─ ❏ ${prefix}jadwaltvnow
-  └─ ❏ ${prefix}covid
+  ├─ ❏ ${prefix}lingua
+  ├─ ❏ ${prefix}codigodepais
 ◪ *DONO*
   │
   ├─ ❏ ${prefix}setprefix
